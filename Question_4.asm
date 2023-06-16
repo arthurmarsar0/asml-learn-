@@ -55,20 +55,19 @@ solve:
     cmp bx, 9
     ja .decrease
         add bx, cx
+        xor cx, cx
         cmp bx, 9
-        ja .volta
+        ja solve
         add bx, '0'
         mov ax, bx
-        xor cx, cx
         call put_char
         ret
     .decrease:
         inc cx
         sub bx, 10
         jmp solve
-    .volta:
-        sub bx, 3
-        jmp solve
+
+
 done:
     jmp $
    
