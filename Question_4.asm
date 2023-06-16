@@ -21,14 +21,15 @@ read:
     je .exit
         cmp al, '-'
         je .next
-            sub ax, '0'
-            add bx, ax
-            add ax, '0'
+            sub al, '0'
+            add bl, al
+            add al, '0'
             call put_char
             jmp read
-        .next:
-            call put_char
-            jmp read
+
+    .next:
+        call put_char
+        jmp read
     .exit:
         ret
     
