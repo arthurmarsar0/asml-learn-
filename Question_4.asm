@@ -56,7 +56,7 @@ solve:
     cmp bx, 9
     ja .decrease
         add bx, cx
-        ;xor cx, cx
+        xor cx, cx
         add bx, '0'
         mov ax, bx
         call put_char
