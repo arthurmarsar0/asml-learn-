@@ -57,6 +57,7 @@ solve:
         add bx, cx
         add bx, '0'
         mov ax, bx
+        xor cx, cx
         call put_char
         ret
     .decrease:
