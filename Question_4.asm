@@ -55,6 +55,8 @@ solve:
     cmp bx, 9
     ja .decrease
         add bx, cx
+        cmp bx, 9
+        ja solve
         add bx, '0'
         mov ax, bx
         xor cx, cx
