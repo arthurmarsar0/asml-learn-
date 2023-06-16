@@ -66,7 +66,7 @@ solve:
         inc cx
         sub bx, 10
         jmp solve
-    .volta
+    .volta:
         sub bx, 3
         jmp solve
 done:
