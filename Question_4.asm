@@ -15,6 +15,7 @@ start:
     
     
 read:
+    xor ax, ax
     call get_char
     cmp al, 0x0d
     je .exit
@@ -51,7 +52,7 @@ return: ;função p ler o enter
     ret
     
 solve:
-    cmp bx, 10
+    cmp bx, 9
     ja .decrease
         add bx, cx
         add bx, '0'
