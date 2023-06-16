@@ -56,7 +56,7 @@ solve:
     ja .decrease
         add bx, cx
         cmp bx, 9
-        ja solve
+        ja .volta
         add bx, '0'
         mov ax, bx
         xor cx, cx
@@ -66,7 +66,9 @@ solve:
         inc cx
         sub bx, 10
         jmp solve
-
+    .volta
+        sub bx, 3
+        jmp solve
 done:
     jmp $
    
