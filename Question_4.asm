@@ -55,8 +55,10 @@ solve:
     cmp bx, 9
     ja .decrease
         add bx, cx
+        ;xor cx, cx
         add bx, '0'
         mov ax, bx
+        add ax, '0'
         call put_char
         ret
     .decrease:
