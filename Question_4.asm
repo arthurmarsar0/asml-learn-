@@ -59,7 +59,6 @@ solve:
         ;xor cx, cx
         add bx, '0'
         mov ax, bx
-        add ax, '0'
         call put_char
         ret
     .decrease:
