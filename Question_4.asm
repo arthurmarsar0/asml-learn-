@@ -26,10 +26,9 @@ read:
             add al, '0'
             call put_char
             jmp read
-
-    .next:
-        call put_char
-        jmp read
+        .next:
+            call put_char
+            jmp read
     .exit:
         ret
     
